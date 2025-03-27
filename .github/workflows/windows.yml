@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  Execute-Shell-Script:
+  Execute-Batch-Script:
     # The type of runner that the job will run on (Windows)
     runs-on: windows-latest
 
