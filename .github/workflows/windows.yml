@@ -1,0 +1,24 @@
+name: Windows Script Action
+
+# Controls when the workflow will run
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  Execute-Shell-Script:
+    # The type of runner that the job will run on (Windows)
+    runs-on: windows-latest
+
+    steps:
+      # Checks out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # List files in the current directory using 'dir' (Windows equivalent of 'ls')
+      - name: List files in the current folder
+        run: dir
+
+      # Execute the hello.bat file
+      - name: Run hello.bat
+        run: .\hello.bat
